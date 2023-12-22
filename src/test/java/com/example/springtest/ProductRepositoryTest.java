@@ -2,12 +2,9 @@ package com.example.springtest;
 
 import com.example.springtest.entity.Product;
 import com.example.springtest.repository.ProductRepository;
-import com.example.springtest.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
