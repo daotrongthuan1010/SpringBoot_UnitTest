@@ -49,4 +49,26 @@ public class ProductServiceTest {
         verify(productRepository, times(1)).findById(1L);
         verifyNoMoreInteractions(productRepository);
     }
+
+    @Test
+    public void testSearchByName() {
+        Product product = Product.builder()
+                .id(1)
+                .name("Samsung galaxy S1")
+                .codeProduct("ThuanDT3_GALAXY_WHITE")
+                .price(2000000)
+                .quantity(100)
+                .build();
+
+
+        when(productRepository.findById(1L)).thenReturn(Optional.of(product));
+
+        ProductResponse resultTest = productService.searchById(1L);
+
+        assertEquals(product.getName(), resultTest.getName());
+        assertEquals(product.getPrice(), resultTest.getPrice());
+
+        verify(productRepository, times(1)).findById(1L);
+        verifyNoMoreInteractions(productRepository);
+    }
 }
