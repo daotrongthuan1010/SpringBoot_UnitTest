@@ -4,6 +4,7 @@ import com.example.springtest.dto.ProductResponse;
 import com.example.springtest.entity.Product;
 import com.example.springtest.repository.ProductRepository;
 import com.example.springtest.service.ProductService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -50,6 +51,7 @@ public class ProductServiceTest {
         verifyNoMoreInteractions(productRepository);
     }
 
+    @DisplayName("test search by name")
     @Test
     public void testSearchByName() {
         Product product = Product.builder()
