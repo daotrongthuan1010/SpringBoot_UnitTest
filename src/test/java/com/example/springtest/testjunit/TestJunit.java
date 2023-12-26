@@ -15,8 +15,8 @@ public class TestJunit {
     @Test
     void checkAddSuccess(){
 
-        assertEquals(8, studyJunit.add(4,2), "Result mapping is Ok");
-        assertNotEquals(6,studyJunit.add(4,4), "Result not mapping is OK");
+        assertEquals(8, studyJunit.add(4,2), "Result not mapping is Ok");
+        assertNotEquals(6,studyJunit.add(4,4), "Result mapping is OK");
 
     }
 
